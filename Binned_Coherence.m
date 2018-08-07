@@ -142,5 +142,110 @@ for i=1:trials
 end
 
 clear C phi S12 S1 S2 t f confC phistd Cerr;
-%% Save
-save ('X:\08. Lab personnel\Current\David\Projects\Ephys\HC Modulation - Re_Vs_dcMEC LFP\2. Output\Was\Analyses\Day1_Maze_Coh.mat','-v7.3');
+
+%% HC_MEC
+%Sample
+for i=1:trials
+    [C,phi,S12,S1,S2,t,f,confC,phistd,Cerr]=cohgramc(HC.Sample.Incorrect(i).trials,MEC.Sample.Incorrect(i).trials,movingwin,params);
+    Sample.HC_MEC.Incorrect(i).Coh=C;
+    Sample.HC_MEC.Incorrect(i).phi=phi;
+    Sample.HC_MEC.Incorrect(i).S12=S12;
+    Sample.HC_MEC.Incorrect(i).S1=S1;
+    Sample.HC_MEC.Incorrect(i).S2=S2;
+    Sample.HC_MEC.Incorrect(i).t=t;
+    Sample.HC_MEC.Incorrect(i).f=f;
+    Sample.HC_MEC.Incorrect(i).confC=confC;
+    Sample.HC_MEC.Incorrect(i).phistd=phistd;
+    Sample.HC_MEC.Incorrect(i).Cerr=Cerr;
+end
+
+clear C phi S12 S1 S2 t f confC phistd Cerr ;
+
+%Choice
+for i=1:trials
+    [C,phi,S12,S1,S2,t,f,confC,phistd,Cerr]=cohgramc(HC.Choice.Incorrect(i).trials,MEC.Choice.Incorrect(i).trials,movingwin,params);
+    Choice.HC_MEC.Incorrect(i).Coh=C;
+    Choice.HC_MEC.Incorrect(i).phi=phi;
+    Choice.HC_MEC.Incorrect(i).S12=S12;
+    Choice.HC_MEC.Incorrect(i).S1=S1;
+    Choice.HC_MEC.Incorrect(i).S2=S2;
+    Choice.HC_MEC.Incorrect(i).t=t;
+    Choice.HC_MEC.Incorrect(i).f=f;
+    Choice.HC_MEC.Incorrect(i).confC=confC;
+    Choice.HC_MEC.Incorrect(i).phistd=phistd;
+    Choice.HC_MEC.Incorrect(i).Cerr=Cerr;
+end
+
+clear C phi S12 S1 S2 t f confC phistd Cerr;
+
+%% HC_Re
+%Sample
+for i=1:trials
+    [C,phi,S12,S1,S2,t,f,confC,phistd,Cerr]=cohgramc(HC.Sample.Incorrect(i).trials,Re.Sample.Incorrect(i).trials,movingwin,params);
+    Sample.HC_Re.Incorrect(i).Coh=C;
+    Sample.HC_Re.Incorrect(i).phi=phi;
+    Sample.HC_Re.Incorrect(i).S12=S12;
+    Sample.HC_Re.Incorrect(i).S1=S1;
+    Sample.HC_Re.Incorrect(i).S2=S2;
+    Sample.HC_Re.Incorrect(i).t=t;
+    Sample.HC_Re.Incorrect(i).f=f;
+    Sample.HC_Re.Incorrect(i).confC=confC;
+    Sample.HC_Re.Incorrect(i).phistd=phistd;
+    Sample.HC_Re.Incorrect(i).Cerr=Cerr;
+end
+
+clear C phi S12 S1 S2 t f confC phistd Cerr ;
+
+%Choice
+for i=1:trials
+    [C,phi,S12,S1,S2,t,f,confC,phistd,Cerr]=cohgramc(HC.Choice.Incorrect(i).trials,Re.Choice.Incorrect(i).trials,movingwin,params);
+    Choice.HC_Re.Incorrect(i).Coh=C;
+    Choice.HC_Re.Incorrect(i).phi=phi;
+    Choice.HC_Re.Incorrect(i).S12=S12;
+    Choice.HC_Re.Incorrect(i).S1=S1;
+    Choice.HC_Re.Incorrect(i).S2=S2;
+    Choice.HC_Re.Incorrect(i).t=t;
+    Choice.HC_Re.Incorrect(i).f=f;
+    Choice.HC_Re.Incorrect(i).confC=confC;
+    Choice.HC_Re.Incorrect(i).phistd=phistd;
+    Choice.HC_Re.Incorrect(i).Cerr=Cerr;
+end
+
+clear C phi S12 S1 S2 t f confC phistd Cerr;
+
+%% MEC_Re
+%Sample
+for i=1:trials
+    [C,phi,S12,S1,S2,t,f,confC,phistd,Cerr]=cohgramc(MEC.Sample.Incorrect(i).trials,Re.Sample.Incorrect(i).trials,movingwin,params);
+    Sample.MEC_Re.Incorrect(i).Coh=C;
+    Sample.MEC_Re.Incorrect(i).phi=phi;
+    Sample.MEC_Re.Incorrect(i).S12=S12;
+    Sample.MEC_Re.Incorrect(i).S1=S1;
+    Sample.MEC_Re.Incorrect(i).S2=S2;
+    Sample.MEC_Re.Incorrect(i).t=t;
+    Sample.MEC_Re.Incorrect(i).f=f;
+    Sample.MEC_Re.Incorrect(i).confC=confC;
+    Sample.MEC_Re.Incorrect(i).phistd=phistd;
+    Sample.MEC_Re.Incorrect(i).Cerr=Cerr;
+end
+
+clear C phi S12 S1 S2 t f confC phistd Cerr ;
+
+%Choice
+for i=1:trials
+    [C,phi,S12,S1,S2,t,f,confC,phistd,Cerr]=cohgramc(MEC.Choice.Incorrect(i).trials,Re.Choice.Incorrect(i).trials,movingwin,params);
+    Choice.MEC_Re.Incorrect(i).Coh=C;
+    Choice.MEC_Re.Incorrect(i).phi=phi;
+    Choice.MEC_Re.Incorrect(i).S12=S12;
+    Choice.MEC_Re.Incorrect(i).S1=S1;
+    Choice.MEC_Re.Incorrect(i).S2=S2;
+    Choice.MEC_Re.Incorrect(i).t=t;
+    Choice.MEC_Re.Incorrect(i).f=f;
+    Choice.MEC_Re.Incorrect(i).confC=confC;
+    Choice.MEC_Re.Incorrect(i).phistd=phistd;
+    Choice.MEC_Re.Incorrect(i).Cerr=Cerr;
+end
+
+clear C phi S12 S1 S2 t f confC phistd Cerr i trials;
+% %% Save
+% save ('X:\08. Lab personnel\Current\David\Projects\Ephys\HC Modulation - Re_Vs_dcMEC LFP\2. Output\Was\Analyses\Day1_Maze_Coh.mat','-v7.3');
